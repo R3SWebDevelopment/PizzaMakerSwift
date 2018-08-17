@@ -17,14 +17,64 @@
                     <view key="view" contentMode="scaleToFill" id="RoF-Ry-JuA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione Queso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVf-OT-ICt">
+                                <rect key="frame" x="16" y="30" width="343" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="xOq-VP-PmB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sinqueso" translatesAutoresizingMaskIntoConstraints="NO" id="eL5-dE-lge">
+                                <rect key="frame" x="124" y="92" width="127" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="a7i-uK-6Cc"/>
+                                </constraints>
+                            </imageView>
+                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cheddar" translatesAutoresizingMaskIntoConstraints="NO" id="StG-Up-qE6">
+                                <rect key="frame" x="16" y="202" width="170" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="iDl-jY-cms"/>
+                                </constraints>
+                            </imageView>
+                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mozzarella" translatesAutoresizingMaskIntoConstraints="NO" id="uXJ-7B-YRp">
+                                <rect key="frame" x="194" y="202" width="170" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="otM-U2-NaG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parmesano" translatesAutoresizingMaskIntoConstraints="NO" id="dv7-4B-Uvp">
+                                <rect key="frame" x="102" y="344" width="170" height="114"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eL5-dE-lge" firstAttribute="leading" secondItem="exh-p8-l4Z" secondAttribute="leading" constant="124" id="4pE-9E-dEU"/>
+                            <constraint firstItem="dv7-4B-Uvp" firstAttribute="centerX" secondItem="eL5-dE-lge" secondAttribute="centerX" id="4wn-Hb-iO3"/>
+                            <constraint firstItem="eL5-dE-lge" firstAttribute="top" secondItem="TVf-OT-ICt" secondAttribute="bottom" constant="38" id="6Br-ms-RY5"/>
+                            <constraint firstItem="uXJ-7B-YRp" firstAttribute="top" secondItem="StG-Up-qE6" secondAttribute="top" id="BO7-RD-gix"/>
+                            <constraint firstItem="uXJ-7B-YRp" firstAttribute="leading" secondItem="StG-Up-qE6" secondAttribute="trailing" constant="8" id="CKP-1c-F46"/>
+                            <constraint firstItem="StG-Up-qE6" firstAttribute="top" secondItem="eL5-dE-lge" secondAttribute="bottom" constant="42" id="Ecu-Ji-6xo"/>
+                            <constraint firstItem="dv7-4B-Uvp" firstAttribute="top" secondItem="uXJ-7B-YRp" secondAttribute="bottom" constant="28" id="F3U-Nw-miS"/>
+                            <constraint firstItem="TVf-OT-ICt" firstAttribute="leading" secondItem="exh-p8-l4Z" secondAttribute="leading" constant="16" id="N0N-z5-pbT"/>
+                            <constraint firstItem="exh-p8-l4Z" firstAttribute="trailing" secondItem="TVf-OT-ICt" secondAttribute="trailing" constant="16" id="PZB-h7-p8R"/>
+                            <constraint firstItem="dv7-4B-Uvp" firstAttribute="leading" secondItem="exh-p8-l4Z" secondAttribute="leading" constant="102" id="PnD-3z-iVD"/>
+                            <constraint firstItem="exh-p8-l4Z" firstAttribute="trailing" secondItem="eL5-dE-lge" secondAttribute="trailing" constant="124" id="avt-VO-GBb"/>
+                            <constraint firstItem="exh-p8-l4Z" firstAttribute="bottom" secondItem="dv7-4B-Uvp" secondAttribute="bottom" constant="160" id="fkT-sL-3wd"/>
+                            <constraint firstItem="StG-Up-qE6" firstAttribute="leading" secondItem="exh-p8-l4Z" secondAttribute="leading" constant="16" id="gH4-Hc-YYY"/>
+                            <constraint firstItem="exh-p8-l4Z" firstAttribute="trailing" secondItem="uXJ-7B-YRp" secondAttribute="trailing" constant="11" id="hoI-gN-LBX"/>
+                            <constraint firstItem="TVf-OT-ICt" firstAttribute="top" secondItem="exh-p8-l4Z" secondAttribute="top" constant="10" id="jxH-8X-kDe"/>
+                            <constraint firstItem="uXJ-7B-YRp" firstAttribute="bottom" secondItem="StG-Up-qE6" secondAttribute="bottom" id="uQR-qX-boY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="exh-p8-l4Z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Queso" id="qXe-WM-lo8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkj-wZ-Jqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-601" y="1118"/>
+            <point key="canvasLocation" x="-602.39999999999998" y="1117.6911544227887"/>
         </scene>
         <!--Tamaño-->
         <scene sceneID="hNz-n2-bh7">
@@ -287,9 +337,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cheddar" width="700" height="464"/>
         <image name="crujiente" width="625" height="315"/>
         <image name="delgada" width="1440" height="980"/>
         <image name="gruesa" width="450" height="273"/>
+        <image name="mozzarella" width="1500" height="1125"/>
+        <image name="parmesano" width="900" height="598"/>
         <image name="pizza_size" width="249" height="269"/>
+        <image name="sinqueso" width="600" height="400"/>
     </resources>
 </document>
