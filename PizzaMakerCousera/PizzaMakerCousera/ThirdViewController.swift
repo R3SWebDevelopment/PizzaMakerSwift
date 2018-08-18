@@ -49,6 +49,7 @@ class ThirdViewController: UIViewController {
         cheddar.alpha = 0.5
         mozzarrella.alpha = 0.5
         parmesano.alpha = 0.5
+        self.isCompleted = self.value != ""
     }
     
     @objc func selectCheddar(){
@@ -62,6 +63,7 @@ class ThirdViewController: UIViewController {
         sinQueso.alpha = 0.5
         mozzarrella.alpha = 0.5
         parmesano.alpha = 0.5
+        self.isCompleted = self.value != ""
     }
     
     @objc func selectMozzarrella(){
@@ -75,6 +77,7 @@ class ThirdViewController: UIViewController {
         sinQueso.alpha = 0.5
         cheddar.alpha = 0.5
         parmesano.alpha = 0.5
+        self.isCompleted = self.value != ""
     }
     
     @objc func selectParmesano(){
@@ -88,6 +91,7 @@ class ThirdViewController: UIViewController {
         sinQueso.alpha = 0.5
         cheddar.alpha = 0.5
         mozzarrella.alpha = 0.5
+        self.isCompleted = self.value != ""
     }
 
 }

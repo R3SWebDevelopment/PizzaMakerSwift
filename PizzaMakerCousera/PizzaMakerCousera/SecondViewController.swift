@@ -45,6 +45,7 @@ class SecondViewController: UIViewController {
         }
         delgada.alpha = 0.5
         gruesa.alpha = 0.5
+        self.isCompleted = self.value != ""
     }
     
     @objc func selectDelgada(){
@@ -57,6 +58,7 @@ class SecondViewController: UIViewController {
         }
         crujiente.alpha = 0.5
         gruesa.alpha = 0.5
+        self.isCompleted = self.value != ""
     }
     
     @objc func selectGruesa(){
@@ -69,6 +71,7 @@ class SecondViewController: UIViewController {
         }
         crujiente.alpha = 0.5
         delgada.alpha = 0.5
+        self.isCompleted = self.value != ""
     }
     
 }

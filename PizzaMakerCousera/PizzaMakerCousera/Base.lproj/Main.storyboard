@@ -218,18 +218,55 @@
         <!--Confirmar-->
         <scene sceneID="eRb-uz-D2E">
             <objects>
-                <viewController id="nPj-gi-xqc" sceneMemberID="viewController">
+                <viewController id="nPj-gi-xqc" customClass="FifthViewController" customModule="PizzaMakerCousera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hS5-cu-Ye7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ooH-Rd-4Oe">
+                                <rect key="frame" x="16" y="92" width="343" height="435"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="435" id="hcB-Ip-uSB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmar Pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfa-gl-9gV">
+                                <rect key="frame" x="16" y="34" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYm-Z0-hjQ">
+                                <rect key="frame" x="16" y="548" width="343" height="42"/>
+                                <state key="normal" title="Confirmar"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ooH-Rd-4Oe" firstAttribute="leading" secondItem="jAa-Ya-zdh" secondAttribute="leading" constant="16" id="3Yb-HR-9hT"/>
+                            <constraint firstItem="RYm-Z0-hjQ" firstAttribute="top" secondItem="ooH-Rd-4Oe" secondAttribute="bottom" constant="21" id="5lj-w9-93h"/>
+                            <constraint firstItem="jAa-Ya-zdh" firstAttribute="trailing" secondItem="ooH-Rd-4Oe" secondAttribute="trailing" constant="16" id="Jve-yq-LNH"/>
+                            <constraint firstItem="Pfa-gl-9gV" firstAttribute="top" secondItem="jAa-Ya-zdh" secondAttribute="top" constant="14" id="MS7-26-sRc"/>
+                            <constraint firstItem="jAa-Ya-zdh" firstAttribute="bottom" secondItem="RYm-Z0-hjQ" secondAttribute="bottom" constant="28" id="Uk0-WA-x5U"/>
+                            <constraint firstItem="jAa-Ya-zdh" firstAttribute="trailing" secondItem="RYm-Z0-hjQ" secondAttribute="trailing" constant="16" id="WJM-Ec-Yg4"/>
+                            <constraint firstItem="ooH-Rd-4Oe" firstAttribute="top" secondItem="Pfa-gl-9gV" secondAttribute="bottom" constant="37" id="Xib-m6-biY"/>
+                            <constraint firstItem="Pfa-gl-9gV" firstAttribute="leading" secondItem="jAa-Ya-zdh" secondAttribute="leading" constant="16" id="kW3-Rw-Y3G"/>
+                            <constraint firstItem="jAa-Ya-zdh" firstAttribute="trailing" secondItem="Pfa-gl-9gV" secondAttribute="trailing" constant="16" id="w6Y-cp-enB"/>
+                            <constraint firstItem="RYm-Z0-hjQ" firstAttribute="leading" secondItem="jAa-Ya-zdh" secondAttribute="leading" constant="16" id="xue-NB-efE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jAa-Ya-zdh"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Confirmar" id="6U6-Wl-vp0"/>
+                    <connections>
+                        <outlet property="confirmar" destination="RYm-Z0-hjQ" id="fPY-qj-dpp"/>
+                        <outlet property="resultado" destination="ooH-Rd-4Oe" id="7Fc-gI-1tz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a38-TI-ywQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="1118"/>
+            <point key="canvasLocation" x="685.60000000000002" y="1117.6911544227887"/>
         </scene>
         <!--Tipo de Masa-->
         <scene sceneID="wg7-f3-ORb">
@@ -329,7 +366,7 @@
         <!--Ingredientes-->
         <scene sceneID="tqz-J1-t7G">
             <objects>
-                <viewController id="qRJ-Kz-EsK" sceneMemberID="viewController">
+                <viewController id="qRJ-Kz-EsK" customClass="ForthViewController" customModule="PizzaMakerCousera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HZu-Si-TVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -409,10 +446,21 @@
                         <viewLayoutGuide key="safeArea" id="DWA-ni-xde"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredientes" id="gLR-mM-xDv"/>
+                    <connections>
+                        <outlet property="aceituna" destination="ZGN-Ym-jaf" id="jOm-O4-B0B"/>
+                        <outlet property="anchoa" destination="wy2-uV-Xqm" id="Bev-4n-WjX"/>
+                        <outlet property="cebolla" destination="uvh-1h-pWD" id="Yp2-IK-Ec5"/>
+                        <outlet property="jamon" destination="Qv7-St-DDw" id="48g-yS-WZl"/>
+                        <outlet property="jamonPavo" destination="eJH-Fb-tDy" id="QGn-9s-K4U"/>
+                        <outlet property="peperoni" destination="n8E-9s-5WV" id="bFM-0b-HIO"/>
+                        <outlet property="pigna" destination="SYb-6v-aZs" id="69Y-iE-D8E"/>
+                        <outlet property="pimiento" destination="V2X-6n-d1W" id="HhC-vy-ue2"/>
+                        <outlet property="salchicha" destination="c4y-Rn-80Z" id="eom-XP-ZvI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWz-SI-f32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45.600000000000001" y="1117.6911544227887"/>
+            <point key="canvasLocation" x="42" y="1118"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
