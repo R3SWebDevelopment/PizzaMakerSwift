@@ -13,7 +13,7 @@
         <!--Queso-->
         <scene sceneID="WGL-mq-GoV">
             <objects>
-                <viewController id="xNZ-VQ-aMy" sceneMemberID="viewController">
+                <viewController id="xNZ-VQ-aMy" customClass="ThirdViewController" customModule="PizzaMakerCousera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RoF-Ry-JuA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,12 @@
                         <viewLayoutGuide key="safeArea" id="exh-p8-l4Z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Queso" id="qXe-WM-lo8"/>
+                    <connections>
+                        <outlet property="cheddar" destination="StG-Up-qE6" id="qLy-bt-akk"/>
+                        <outlet property="mozzarrella" destination="uXJ-7B-YRp" id="lwA-0l-8VP"/>
+                        <outlet property="parmesano" destination="dv7-4B-Uvp" id="eDO-kS-zKK"/>
+                        <outlet property="sinQueso" destination="eL5-dE-lge" id="8AD-QQ-qit"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkj-wZ-Jqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -242,7 +248,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XqX-OQ-V3z">
                                 <rect key="frame" x="16" y="57.5" width="343" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delgada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnB-Pj-apO">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crujiente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnB-Pj-apO">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <nil key="textColor"/>
@@ -310,6 +316,11 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tipo de Masa" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="crujiente" destination="0l0-kD-VTa" id="Kqf-IR-F4d"/>
+                        <outlet property="delgada" destination="uAW-Qo-01I" id="3VV-EQ-Zk7"/>
+                        <outlet property="gruesa" destination="yAZ-J6-1uC" id="kXI-y2-5g3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
