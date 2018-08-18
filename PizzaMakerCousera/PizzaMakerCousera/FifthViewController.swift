@@ -29,7 +29,41 @@ class FifthViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        var resultado = ""
+        if (self.tamagno?.isCompleted)!{
+            let size = self.tamagno?.size.text!
+            let slices = self.tamagno?.slices.text!
+            let serves = self.tamagno?.serves.text!
+            resultado += "Tamaño: \(size) (Slices: \(slices) - Serves: \(serves)) \n"
+        }else{
+            resultado += "Debe de seleccionar el tamaño de la pizza.\n"
+        }
+
+        if (self.tipoMasa?.isCompleted)!{
+            let masa = self.tipoMasa?.value
+            resultado += "Tipo de masa: \(masa)\n"
+        }else{
+            resultado += "Debe de seleccionar el tipo de masa de la pizza.\n"
+        }
+        
+        if (self.queso?.isCompleted)!{
+            let queso = self.queso?.value
+            resultado += "Queso: \(queso)\n"
+        }else{
+            resultado += "Debe de seleccionar el queso para la pizza.\n"
+        }
+        
+        if (self.queso?.isCompleted)!{
+            resultado += "Ingredientes:\n"
+            for ingrediente in (self.ingredientes?.value)!{
+                resultado += "\(ingrediente)\n"
+            }
+        }else{
+            resultado += "Debe de seleccionar los ingredientes para la pizza.\n"
+        }
+        
         self.confirmar.isEnabled =  (self.tamagno?.isCompleted)! && (self.tipoMasa?.isCompleted)! && (self.queso?.isCompleted)! && (self.ingredientes?.isCompleted)!
+        self.resultado.text = resultado
     }
     
     
