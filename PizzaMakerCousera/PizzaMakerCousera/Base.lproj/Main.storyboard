@@ -96,14 +96,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpS-iv-bo9">
                                         <rect key="frame" x="0.0" y="0.0" width="114.5" height="47"/>
                                         <state key="normal" title="Small"/>
+                                        <connections>
+                                            <action selector="selectSmall:" destination="9pv-A4-QxB" eventType="touchUpInside" id="XbM-Sv-lC2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34k-YA-hrh">
                                         <rect key="frame" x="114.5" y="0.0" width="114" height="47"/>
                                         <state key="normal" title="Medium"/>
+                                        <connections>
+                                            <action selector="selectMedium:" destination="9pv-A4-QxB" eventType="touchUpInside" id="1ql-Os-4xP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0B-6v-rRb">
                                         <rect key="frame" x="228.5" y="0.0" width="114.5" height="47"/>
                                         <state key="normal" title="Large"/>
+                                        <connections>
+                                            <action selector="selectLarge:" destination="9pv-A4-QxB" eventType="touchUpInside" id="KsQ-x3-Ydt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -187,6 +196,14 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tamaño" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="large" destination="f0B-6v-rRb" id="mk0-Dn-nAG"/>
+                        <outlet property="medium" destination="34k-YA-hrh" id="RMh-9b-hWD"/>
+                        <outlet property="serves" destination="1iz-0N-Rip" id="YpZ-U8-S4O"/>
+                        <outlet property="size" destination="rus-bu-UCs" id="GPn-jX-eIv"/>
+                        <outlet property="slices" destination="kHP-Jg-JYz" id="bwl-cM-gbX"/>
+                        <outlet property="small" destination="UpS-iv-bo9" id="CkK-RF-O6f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,14 +322,86 @@
                     <view key="view" contentMode="scaleToFill" id="HZu-Si-TVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccionar Ingredientes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pd4-Sc-yNV">
+                                <rect key="frame" x="16" y="30" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="A8v-er-zR8">
+                                <rect key="frame" x="16" y="74.5" width="343" height="150"/>
+                                <subviews>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aceituna" translatesAutoresizingMaskIntoConstraints="NO" id="ZGN-Ym-jaf">
+                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="150"/>
+                                    </imageView>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anchoas" translatesAutoresizingMaskIntoConstraints="NO" id="wy2-uV-Xqm">
+                                        <rect key="frame" x="115.5" y="0.0" width="112" height="150"/>
+                                    </imageView>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cebolla" translatesAutoresizingMaskIntoConstraints="NO" id="uvh-1h-pWD">
+                                        <rect key="frame" x="230.5" y="0.0" width="112.5" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="9N3-WH-DEw"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="EUW-b8-BTb">
+                                <rect key="frame" x="16" y="244.5" width="343" height="150"/>
+                                <subviews>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jamon" translatesAutoresizingMaskIntoConstraints="NO" id="Qv7-St-DDw">
+                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="150"/>
+                                    </imageView>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salchicha" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-Rn-80Z">
+                                        <rect key="frame" x="115.5" y="0.0" width="112" height="150"/>
+                                    </imageView>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pavo" translatesAutoresizingMaskIntoConstraints="NO" id="eJH-Fb-tDy">
+                                        <rect key="frame" x="230.5" y="0.0" width="112.5" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Sbo-WN-4FN"/>
+                                    <constraint firstAttribute="height" constant="150" id="tip-vS-fLp"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dPv-mz-i36">
+                                <rect key="frame" x="16" y="405" width="343" height="150"/>
+                                <subviews>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pigna" translatesAutoresizingMaskIntoConstraints="NO" id="SYb-6v-aZs">
+                                        <rect key="frame" x="0.0" y="0.0" width="112.5" height="150"/>
+                                    </imageView>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peperoni" translatesAutoresizingMaskIntoConstraints="NO" id="n8E-9s-5WV">
+                                        <rect key="frame" x="115.5" y="0.0" width="112" height="150"/>
+                                    </imageView>
+                                    <imageView alpha="0.5" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piminento" translatesAutoresizingMaskIntoConstraints="NO" id="V2X-6n-d1W">
+                                        <rect key="frame" x="230.5" y="0.0" width="112.5" height="150"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EUW-b8-BTb" firstAttribute="top" secondItem="A8v-er-zR8" secondAttribute="bottom" constant="20" id="2Hg-W2-I28"/>
+                            <constraint firstItem="EUW-b8-BTb" firstAttribute="leading" secondItem="DWA-ni-xde" secondAttribute="leading" constant="16" id="2WA-Ff-V8n"/>
+                            <constraint firstItem="dPv-mz-i36" firstAttribute="top" secondItem="HZu-Si-TVH" secondAttribute="top" constant="405" id="7Pp-bn-QF2"/>
+                            <constraint firstItem="dPv-mz-i36" firstAttribute="leading" secondItem="EUW-b8-BTb" secondAttribute="leading" id="Aek-3w-qCW"/>
+                            <constraint firstItem="A8v-er-zR8" firstAttribute="leading" secondItem="DWA-ni-xde" secondAttribute="leading" constant="16" id="IBW-8h-AL5"/>
+                            <constraint firstItem="DWA-ni-xde" firstAttribute="trailing" secondItem="Pd4-Sc-yNV" secondAttribute="trailing" constant="16" id="TCP-18-avG"/>
+                            <constraint firstItem="Pd4-Sc-yNV" firstAttribute="leading" secondItem="DWA-ni-xde" secondAttribute="leading" constant="16" id="blb-Oo-4iA"/>
+                            <constraint firstItem="DWA-ni-xde" firstAttribute="bottom" secondItem="dPv-mz-i36" secondAttribute="bottom" constant="63" id="ePN-qU-E09"/>
+                            <constraint firstItem="DWA-ni-xde" firstAttribute="trailing" secondItem="A8v-er-zR8" secondAttribute="trailing" constant="16" id="hT3-Xe-bcu"/>
+                            <constraint firstItem="A8v-er-zR8" firstAttribute="top" secondItem="Pd4-Sc-yNV" secondAttribute="bottom" constant="24" id="kXs-ra-kpB"/>
+                            <constraint firstItem="Pd4-Sc-yNV" firstAttribute="top" secondItem="DWA-ni-xde" secondAttribute="top" constant="10" id="s3J-c1-eCn"/>
+                            <constraint firstAttribute="trailing" secondItem="EUW-b8-BTb" secondAttribute="trailing" constant="16" id="sFG-pG-HXd"/>
+                            <constraint firstItem="dPv-mz-i36" firstAttribute="trailing" secondItem="EUW-b8-BTb" secondAttribute="trailing" id="vkU-En-Fyt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DWA-ni-xde"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ingredientes" id="gLR-mM-xDv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWz-SI-f32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="1118"/>
+            <point key="canvasLocation" x="45.600000000000001" y="1117.6911544227887"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -337,13 +426,22 @@
         </scene>
     </scenes>
     <resources>
+        <image name="aceituna" width="620" height="356"/>
+        <image name="anchoas" width="640" height="286"/>
+        <image name="cebolla" width="500" height="500"/>
         <image name="cheddar" width="700" height="464"/>
         <image name="crujiente" width="625" height="315"/>
         <image name="delgada" width="1440" height="980"/>
         <image name="gruesa" width="450" height="273"/>
+        <image name="jamon" width="800" height="497"/>
         <image name="mozzarella" width="1500" height="1125"/>
         <image name="parmesano" width="900" height="598"/>
+        <image name="pavo" width="620" height="350"/>
+        <image name="peperoni" width="800" height="800"/>
+        <image name="pigna" width="600" height="400"/>
+        <image name="piminento" width="800" height="550"/>
         <image name="pizza_size" width="249" height="269"/>
+        <image name="salchicha" width="600" height="600"/>
         <image name="sinqueso" width="600" height="400"/>
     </resources>
 </document>
